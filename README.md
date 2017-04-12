@@ -1,6 +1,6 @@
 # gotalk
 
-这是我在 [QCon 北京2017演讲](http://2017.qconbeijing.com/presentation/872) 的配套代码。
+这是我在 [QCon 北京 2017 演讲](http://2017.qconbeijing.com/presentation/872) 的配套代码。
 
 基于 Go 实现了一个深度学习看图说话服务，即机器学习的 serving（inference） 部分，Tensorflow 的 Python 训练代码在 [这里](https://github.com/tensorflow/models/tree/master/im2txt)。
 
