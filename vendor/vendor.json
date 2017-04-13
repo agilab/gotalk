@@ -1,0 +1,13 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "T3AENIPUcQ8V/ylYC9PqsUb6hHM=",
+			"path": "github.com/tensorflow/tensorflow/tensorflow/go",
+			"revision": "468eb47a90e301201eb9ab4ff111c16ef535d66f",
+			"revisionTime": "2017-04-10T01:52:43Z"
+		}
+	],
+	"rootPath": "github.com/huichen/gotalk"
+}

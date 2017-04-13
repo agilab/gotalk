@@ -7,7 +7,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/agilab/gotalk"
+	"github.com/huichen/gotalk"
 	tf "github.com/tensorflow/tensorflow/tensorflow/go"
 )
 
@@ -24,6 +24,7 @@ var (
 func main() {
 	flag.Parse()
 
+	// 载入词典
 	vocab = &gotalk.Vocabulary{}
 	err := vocab.LoadFromFile(*vocabFile)
 	if err != nil {
@@ -62,6 +63,7 @@ func process(w http.ResponseWriter, r *http.Request) {
 	}
 	log.Printf("%s", url[0])
 
+	// 得到 url 图像的字节串
 	response, err := http.Get(url[0])
 	if err != nil {
 		return
@@ -75,6 +77,7 @@ func process(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// 生成标题
 	captions, err := gotalk.GenerateCaption(session, graph, vocab, tensor)
 	if err != nil {
 		return

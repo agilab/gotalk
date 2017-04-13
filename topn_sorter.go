@@ -1,5 +1,6 @@
 package gotalk
 
+// 得到 array 中 top n 的元素的 index
 func topNSort(array []float32, n int) []int {
 	result := make([]int, 0, n)
 	for i, number := range array {

@@ -8,7 +8,7 @@ import (
 	"runtime/pprof"
 	"time"
 
-	"github.com/agilab/gotalk"
+	"github.com/huichen/gotalk"
 	tf "github.com/tensorflow/tensorflow/tensorflow/go"
 )
 
@@ -16,7 +16,7 @@ var (
 	modelFile  = flag.String("model", "", "模型文件")
 	imageFile  = flag.String("image", "", "图片文件")
 	vocabFile  = flag.String("vocab", "", "词典文件")
-	cpuprofile = flag.String("cpuprofile", "", "write cpu profile to file")
+	cpuprofile = flag.String("cpuprofile", "", "CPU profile 文件")
 )
 
 func main() {
@@ -31,6 +31,7 @@ func main() {
 		defer pprof.StopCPUProfile()
 	}
 
+	// 载入词典
 	vocab := gotalk.Vocabulary{}
 	err := vocab.LoadFromFile(*vocabFile)
 	if err != nil {
@@ -65,7 +66,7 @@ func main() {
 	start := time.Now()
 	gotalk.GenerateCaption(session, graph, &vocab, image)
 	elapsed := time.Since(start)
-	log.Printf("花费时间 %s", elapsed)
+	log.Printf("GenerateCaption 花费时间 %s", elapsed)
 }
 
 func makeTensorFromImage(filename string) (*tf.Tensor, error) {

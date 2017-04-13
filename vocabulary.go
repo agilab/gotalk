@@ -12,6 +12,7 @@ const (
 	unkWord   = "<UNK>"
 )
 
+// 该结构体维护一个词典，用于 one-hot encoding
 type Vocabulary struct {
 	idToWord map[int64]string
 	wordToId map[string]int64
