@@ -6,4 +6,6 @@
 
 代码了实现了 tensorflow 模型导入、输入输出和 LSTM beam search 功能，并实现了 web 服务。
 
+我打包的 Docker 镜像中已经包含了所有模型文件，可以直接运行，见 [docker hub](https://hub.docker.com/r/unmerged/gotalk/)。	
+
 模型文件由 [free_tf_model 工具](https://github.com/agilab/freeze_tf_model) 从 tf.train.Saver 保存的 checkpoint 生成，对于图说这个项目，训练代码保存的 checkpoint 无法直接用，需要通过 [这个代码](https://github.com/agilab/im2txt) 中的 save_model.py 工具转化成 inference 模型后再调用 free_tf_model。
