@@ -8,7 +8,7 @@ import (
 	"runtime/pprof"
 	"time"
 
-	"github.com/huichen/gotalk"
+	"github.com/agilab/gotalk"
 	tf "github.com/tensorflow/tensorflow/tensorflow/go"
 )
 
