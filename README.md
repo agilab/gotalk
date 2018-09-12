@@ -1,8 +1,8 @@
 # gotalk
 
-这是我在 [QCon 北京 2017 演讲](http://2017.qconbeijing.com/presentation/872) 的配套代码。
+模型基于 Google 的论文[《Show and Tell: Lessons learned from the 2015 MSCOCO Image Captioning Challenge》](https://arxiv.org/pdf/1609.06647.pdf)
 
-基于 Go 实现了一个深度学习看图说话服务，即机器学习的 serving（inference） 部分，Tensorflow 的 Python 训练代码在 [这里](https://github.com/tensorflow/models/tree/master/im2txt)。
+这个项目基于 Go 实现了一个深度学习看图说话服务，即机器学习的 serving（inference） 部分，Tensorflow 的 Python 训练代码在 [这里](https://github.com/tensorflow/models/tree/master/im2txt)。
 
 代码了实现了 tensorflow 模型导入、输入输出和 LSTM beam search 功能，并实现了 web 服务。
 
